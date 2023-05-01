@@ -1,0 +1,213 @@
+<?xml version="1.0" ?>
+<robot name="Monitring" xmlns:xacro="http://www.ros.org/wiki/xacro" >
+
+<transmission name="front_left_base_leg_joint_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="front_left_base_leg_joint">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="front_left_base_leg_joint_actr">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<transmission name="front_left_leg_joint_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="front_left_leg_joint">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="front_left_leg_joint_actr">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<transmission name="rear_left_base_leg_joint_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="rear_left_base_leg_joint">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="rear_left_base_leg_joint_actr">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<transmission name="rear_left_leg_joint_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="rear_left_leg_joint">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="rear_left_leg_joint_actr">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<transmission name="rear_right_base_leg_joint_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="rear_right_base_leg_joint">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="rear_right_base_leg_joint_actr">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<transmission name="rear_right_leg_joint_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="rear_right_leg_joint">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="rear_right_leg_joint_actr">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<transmission name="front_right_base_leg_joint_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="front_right_base_leg_joint">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="front_right_base_leg_joint_actr">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<transmission name="front_right_leg_joint_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="front_right_leg_joint">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="front_right_leg_joint_actr">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<transmission name="front_left_base_joint_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="front_left_base_joint">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="front_left_base_joint_actr">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<transmission name="front_right_base_joint_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="front_right_base_joint">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="front_right_base_joint_actr">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<transmission name="rear_left_base_joint_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="rear_left_base_joint">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="rear_left_base_joint_actr">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<transmission name="rear_right_base_joint_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="rear_right_base_joint">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="rear_right_base_joint_actr">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<transmission name="hydraulic_cylinder_elbow_joint_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="hydraulic_cylinder_elbow_joint">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="hydraulic_cylinder_elbow_joint_actr">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<transmission name="jaw_rotator_clip_joint_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="jaw_rotator_clip_joint">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="jaw_rotator_clip_joint_actr">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<transmission name="jaw_rotator_joint_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="jaw_rotator_joint">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="jaw_rotator_joint_actr">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<transmission name="jaw_back_palm_joint_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="jaw_back_palm_joint">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="jaw_back_palm_joint_actr">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<transmission name="jaw_front_palm_joint_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="jaw_front_palm_joint">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="jaw_front_palm_joint_actr">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<transmission name="jaw_back_finger_joint_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="jaw_back_finger_joint">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="jaw_back_finger_joint_actr">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<transmission name="jaw_front_finger_joint_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="jaw_front_finger_joint">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="jaw_front_finger_joint_actr">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+</robot>

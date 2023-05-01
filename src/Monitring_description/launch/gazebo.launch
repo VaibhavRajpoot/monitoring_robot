@@ -1,0 +1,37 @@
+<launch>
+  <param name="robot_description" command="$(find xacro)/xacro $(find Monitring_description)/urdf/Monitring.xacro"/>
+  <node name="spawn_urdf" pkg="gazebo_ros" type="spawn_model" args="-param robot_description -urdf -model Monitring"/>
+  <node name="RSP" pkg="robot_state_publisher" type="robot_state_publisher" output="screen"/>
+  <node name="jsp" pkg="joint_state_publisher" type="joint_state_publisher" output="screen"/>
+
+  <include file="$(find gazebo_ros)/launch/empty_world.launch">
+    <arg name="paused" value="true"/>
+    <arg name="use_sim_time" value="true"/>
+    <arg name="gui" value="true"/>
+    <arg name="headless" value="false"/>
+    <arg name="debug" value="false"/>
+  </include>
+  <rosparam command="load" file="$(find Monitring_description)/launch/controller.yaml"/>
+
+  <node name="controller_spawner" pkg="controller_manager" type="spawner" 
+  args="front_left_base_leg_joint_position_controller
+  front_left_leg_joint_position_controller 
+  rear_left_base_leg_joint_position_controller 
+  rear_left_leg_joint_position_controller
+  rear_right_base_leg_joint_position_controller 
+  rear_right_leg_joint_position_controller 
+  front_right_base_leg_joint_position_controller 
+  front_right_leg_joint_position_controller 
+  front_left_base_joint_position_controller 
+  front_right_base_joint_position_controller 
+  rear_left_base_joint_position_controller 
+  rear_right_base_joint_position_controller 
+  hydraulic_cylinder_elbow_joint_position_controller 
+  jaw_rotator_clip_joint_position_controller 
+  jaw_rotator_joint_position_controller 
+  jaw_back_palm_joint_position_controller 
+  jaw_front_palm_joint_position_controller 
+  jaw_back_finger_joint_position_controller
+  jaw_front_finger_joint_position_controller"/>
+
+</launch>

@@ -1,0 +1,83 @@
+Monitring_controller:
+  # Publish all joint states -----------------------------------
+  joint_state_controller:
+    type: joint_state_controller/JointStateController
+    publish_rate: 50
+
+  # Position Controllers --------------------------------------
+  front_left_base_leg_joint_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: front_left_base_leg_joint
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  front_left_leg_joint_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: front_left_leg_joint
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  rear_left_base_leg_joint_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: rear_left_base_leg_joint
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  rear_left_leg_joint_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: rear_left_leg_joint
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  rear_right_base_leg_joint_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: rear_right_base_leg_joint
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  rear_right_leg_joint_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: rear_right_leg_joint
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  front_right_base_leg_joint_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: front_right_base_leg_joint
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  front_right_leg_joint_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: front_right_leg_joint
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  front_left_base_joint_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: front_left_base_joint
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  front_right_base_joint_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: front_right_base_joint
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  rear_left_base_joint_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: rear_left_base_joint
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  rear_right_base_joint_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: rear_right_base_joint
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  hydraulic_cylinder_elbow_joint_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: hydraulic_cylinder_elbow_joint
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  jaw_rotator_clip_joint_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: jaw_rotator_clip_joint
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  jaw_rotator_joint_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: jaw_rotator_joint
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  jaw_back_palm_joint_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: jaw_back_palm_joint
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  jaw_front_palm_joint_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: jaw_front_palm_joint
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  jaw_back_finger_joint_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: jaw_back_finger_joint
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  jaw_front_finger_joint_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: jaw_front_finger_joint
+    pid: {p: 100.0, i: 0.01, d: 10.0}

@@ -1,0 +1,2 @@
+Monitring_description:mo_bot
+-DCATKIN_DEVEL_PREFIX=/home/vaibhav/monitoring_robot/devel -DCMAKE_INSTALL_PREFIX=/home/vaibhav/monitoring_robot/install -G Unix Makefiles

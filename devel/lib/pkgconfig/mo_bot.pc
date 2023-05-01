@@ -1,0 +1,8 @@
+prefix=/home/vaibhav/monitoring_robot/devel
+
+Name: mo_bot
+Description: Description of mo_bot
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

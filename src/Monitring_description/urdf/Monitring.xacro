@@ -1,0 +1,1064 @@
+<?xml version="1.0" ?>
+<robot name="Monitring" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+<xacro:include filename="$(find Monitring_description)/urdf/materials.xacro" />
+<xacro:include filename="$(find Monitring_description)/urdf/Monitring.trans" />
+<xacro:include filename="$(find Monitring_description)/urdf/Monitring.gazebo" />
+<link name="base_link">
+  <inertial>
+    <origin xyz="-0.00020325102332582743 -0.006614361054954055 0.286115067434537" rpy="0 0 0"/>
+    <mass value="80.71088314860289"/>
+    <inertia ixx="0.99771" iyy="0.6475" izz="1.528021" ixy="0.000886" iyz="0.021555" ixz="-2.2e-05"/>
+  </inertial>
+  <visual>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://Monitring_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://Monitring_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="front_left_leg_motor_1">
+  <inertial>
+    <origin xyz="-0.01355306353058533 2.6958860482872993e-07 2.5568792041963384e-07" rpy="0 0 0"/>
+    <mass value="0.10249936906188849"/>
+    <inertia ixx="8e-06" iyy="1.1e-05" izz="1.1e-05" ixy="-0.0" iyz="-0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.172917 0.119216 -0.14933" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://Monitring_description/meshes/front_left_leg_motor_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.172917 0.119216 -0.14933" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://Monitring_description/meshes/front_left_leg_motor_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="front_left_base_leg_motor_1">
+  <inertial>
+    <origin xyz="0.010454059020349127 -9.613628770832605e-08 1.8815450003595302e-07" rpy="0 0 0"/>
+    <mass value="0.20345739422810855"/>
+    <inertia ixx="4e-05" iyy="2.8e-05" izz="2.8e-05" ixy="0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.139917 0.23194 -0.288009" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://Monitring_description/meshes/front_left_base_leg_motor_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.139917 0.23194 -0.288009" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://Monitring_description/meshes/front_left_base_leg_motor_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="back_left_base_leg_motor_1">
+  <inertial>
+    <origin xyz="0.010454242286346449 3.5977566265055216e-07 2.1268242222927114e-08" rpy="0 0 0"/>
+    <mass value="0.2034573942281088"/>
+    <inertia ixx="4e-05" iyy="2.8e-05" izz="2.8e-05" ixy="0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.139667 -0.229401 -0.287472" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://Monitring_description/meshes/back_left_base_leg_motor_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.139667 -0.229401 -0.287472" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://Monitring_description/meshes/back_left_base_leg_motor_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="back_left_leg_motor_1">
+  <inertial>
+    <origin xyz="-0.011111359672118515 -2.1675701084022947e-07 2.2569353907986311e-07" rpy="0 0 0"/>
+    <mass value="0.08323257036604467"/>
+    <inertia ixx="6e-06" iyy="7e-06" izz="7e-06" ixy="-0.0" iyz="-0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.167667 -0.341735 -0.148476" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://Monitring_description/meshes/back_left_leg_motor_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.167667 -0.341735 -0.148476" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://Monitring_description/meshes/back_left_leg_motor_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="back_right_base_leg_motor_1">
+  <inertial>
+    <origin xyz="-0.010454848607162615 -1.1127678836708732e-07 -2.9755577557466495e-07" rpy="0 0 0"/>
+    <mass value="0.20345739422810927"/>
+    <inertia ixx="4e-05" iyy="2.8e-05" izz="2.8e-05" ixy="0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.140333 -0.229069 -0.287433" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://Monitring_description/meshes/back_right_base_leg_motor_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.140333 -0.229069 -0.287433" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://Monitring_description/meshes/back_right_base_leg_motor_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="back_right_leg_motor_1">
+  <inertial>
+    <origin xyz="0.011110862618776779 -4.2584045267801685e-07 3.1288211896352003e-07" rpy="0 0 0"/>
+    <mass value="0.08323257036604494"/>
+    <inertia ixx="6e-06" iyy="7e-06" izz="7e-06" ixy="-0.0" iyz="0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.168333 -0.341236 -0.148302" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://Monitring_description/meshes/back_right_leg_motor_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.168333 -0.341236 -0.148302" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://Monitring_description/meshes/back_right_leg_motor_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="front_right_base_leg_motor_1">
+  <inertial>
+    <origin xyz="-0.010455031888808447 -9.585623078622874e-08 -3.306228518740184e-07" rpy="0 0 0"/>
+    <mass value="0.20345739422810932"/>
+    <inertia ixx="4e-05" iyy="2.8e-05" izz="2.8e-05" ixy="0.0" iyz="-0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.140083 0.23244 -0.28801" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://Monitring_description/meshes/front_right_base_leg_motor_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.140083 0.23244 -0.28801" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://Monitring_description/meshes/front_right_base_leg_motor_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="front_right_leg_motor_1">
+  <inertial>
+    <origin xyz="0.013552199751893257 3.276070541513576e-07 -1.322617027010864e-07" rpy="0 0 0"/>
+    <mass value="0.10249936906188857"/>
+    <inertia ixx="8e-06" iyy="1.1e-05" izz="1.1e-05" ixy="-0.0" iyz="-0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.173083 0.120107 -0.149014" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://Monitring_description/meshes/front_right_leg_motor_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.173083 0.120107 -0.149014" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://Monitring_description/meshes/front_right_leg_motor_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="front_left_base_leg_1">
+  <inertial>
+    <origin xyz="-0.0042028087443805595 0.03753931839608016 -0.04369504771125657" rpy="0 0 0"/>
+    <mass value="2.092722249521675"/>
+    <inertia ixx="0.010959" iyy="0.00659" izz="0.004637" ixy="0.000168" iyz="0.00476" ixz="-0.000192"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.169917 0.23194 -0.288009" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://Monitring_description/meshes/front_left_base_leg_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.169917 0.23194 -0.288009" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://Monitring_description/meshes/front_left_base_leg_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="front_left_leg_1">
+  <inertial>
+    <origin xyz="0.004220836142769302 -0.055275914090389164 -0.04659499214753224" rpy="0 0 0"/>
+    <mass value="1.065581536123824"/>
+    <inertia ixx="0.004832" iyy="0.002304" izz="0.002603" ixy="4.1e-05" iyz="-0.002257" ixz="3.5e-05"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.137917 0.119216 -0.14933" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://Monitring_description/meshes/front_left_leg_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.137917 0.119216 -0.14933" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://Monitring_description/meshes/front_left_leg_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="back_left_base_leg_1">
+  <inertial>
+    <origin xyz="-0.004163104648545246 0.03810093624728547 -0.0446590675804798" rpy="0 0 0"/>
+    <mass value="2.1124453566269383"/>
+    <inertia ixx="0.011241" iyy="0.006793" izz="0.004718" ixy="0.000161" iyz="0.004891" ixz="-0.000184"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.169667 -0.229401 -0.287472" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://Monitring_description/meshes/back_left_base_leg_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.169667 -0.229401 -0.287472" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://Monitring_description/meshes/back_left_base_leg_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="back_left_leg_1">
+  <inertial>
+    <origin xyz="0.0023131088272729805 -0.055372230830643854 -0.0464666435271061" rpy="0 0 0"/>
+    <mass value="1.065785454975773"/>
+    <inertia ixx="0.004832" iyy="0.002293" izz="0.002612" ixy="-1.3e-05" iyz="-0.002257" ixz="-1.2e-05"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.137667 -0.341735 -0.148476" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://Monitring_description/meshes/back_left_leg_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.137667 -0.341735 -0.148476" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://Monitring_description/meshes/back_left_leg_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="back_right_base_leg_1">
+  <inertial>
+    <origin xyz="0.004897967571580536 0.03979115383289453 -0.046741590293101654" rpy="0 0 0"/>
+    <mass value="2.0163974221185823"/>
+    <inertia ixx="0.010807" iyy="0.006534" izz="0.004494" ixy="-0.000103" iyz="0.00471" ixz="0.000116"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.170333 -0.229069 -0.287433" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://Monitring_description/meshes/back_right_base_leg_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.170333 -0.229069 -0.287433" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://Monitring_description/meshes/back_right_base_leg_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="back_right_leg_1">
+  <inertial>
+    <origin xyz="-0.002313568074036848 -0.05542816518882643 -0.046400173035600456" rpy="0 0 0"/>
+    <mass value="1.06578555375219"/>
+    <inertia ixx="0.004832" iyy="0.002288" izz="0.002618" ixy="1.3e-05" iyz="-0.002257" ixz="1.2e-05"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.138333 -0.341236 -0.148302" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://Monitring_description/meshes/back_right_leg_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.138333 -0.341236 -0.148302" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://Monitring_description/meshes/back_right_leg_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="front_right_base_leg_1">
+  <inertial>
+    <origin xyz="0.004952969623389425 0.0391325805786599 -0.04579486394516111" rpy="0 0 0"/>
+    <mass value="1.9975475266701999"/>
+    <inertia ixx="0.010541" iyy="0.006356" izz="0.004404" ixy="-0.00011" iyz="0.004584" ixz="0.000126"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.170083 0.23244 -0.28801" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://Monitring_description/meshes/front_right_base_leg_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.170083 0.23244 -0.28801" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://Monitring_description/meshes/front_right_base_leg_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="front_right_leg_1">
+  <inertial>
+    <origin xyz="-0.0023137513825912392 -0.055371737267717755 -0.046467042206003964" rpy="0 0 0"/>
+    <mass value="1.0657855537518786"/>
+    <inertia ixx="0.004832" iyy="0.002293" izz="0.002612" ixy="1.3e-05" iyz="-0.002257" ixz="1.2e-05"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.138083 0.120107 -0.149014" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://Monitring_description/meshes/front_right_leg_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.138083 0.120107 -0.149014" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://Monitring_description/meshes/front_right_leg_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="front_left_base_1">
+  <inertial>
+    <origin xyz="-0.09992764108558433 -0.030370973245198912 -0.0009104367972322946" rpy="0 0 0"/>
+    <mass value="13.258348671835023"/>
+    <inertia ixx="0.018658" iyy="0.060819" izz="0.060451" ixy="-0.000208" iyz="0.000423" ixz="-0.000144"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.149917 0.202438 -0.289554" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://Monitring_description/meshes/front_left_base_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.149917 0.202438 -0.289554" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://Monitring_description/meshes/front_left_base_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="front_right_base_1">
+  <inertial>
+    <origin xyz="0.0706885656481083 -0.031166932082921928 -0.0005375477104654358" rpy="0 0 0"/>
+    <mass value="8.37636589964444"/>
+    <inertia ixx="0.016226" iyy="0.02392" izz="0.023592" ixy="0.000424" iyz="0.000418" ixz="-0.000102"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.150083 0.202438 -0.289554" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://Monitring_description/meshes/front_right_base_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.150083 0.202438 -0.289554" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://Monitring_description/meshes/front_right_base_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="back_left_base_1">
+  <inertial>
+    <origin xyz="-0.10265316351089646 0.02981183227621112 0.0014426139207562305" rpy="0 0 0"/>
+    <mass value="11.82293363668432"/>
+    <inertia ixx="0.014342" iyy="0.054891" izz="0.05562" ixy="0.000269" iyz="5e-06" ixz="0.001205"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.149667 -0.199368 -0.28207" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://Monitring_description/meshes/back_left_base_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.149667 -0.199368 -0.28207" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://Monitring_description/meshes/back_left_base_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="back_right_base_1">
+  <inertial>
+    <origin xyz="0.06907756203317217 0.02922427436402994 -0.0014045542357313812" rpy="0 0 0"/>
+    <mass value="6.910421304438817"/>
+    <inertia ixx="0.011763" iyy="0.01837" izz="0.019249" ixy="-0.000113" iyz="1.9e-05" ixz="0.000368"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.150333 -0.199368 -0.28207" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://Monitring_description/meshes/back_right_base_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.150333 -0.199368 -0.28207" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://Monitring_description/meshes/back_right_base_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="lidar_1">
+  <inertial>
+    <origin xyz="4.829402863645849e-07 2.137869975457618e-05 0.017963606616898997" rpy="0 0 0"/>
+    <mass value="0.5398697778952618"/>
+    <inertia ixx="0.00014" iyy="0.00014" izz="0.000154" ixy="-0.0" iyz="0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="8.4e-05 0.132368 -0.34789" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://Monitring_description/meshes/lidar_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="8.4e-05 0.132368 -0.34789" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://Monitring_description/meshes/lidar_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="front_right_sensor_1">
+  <inertial>
+    <origin xyz="-3.8654046767561123e-07 -0.0049998732751902475 5.552201057523742e-06" rpy="0 0 0"/>
+    <mass value="0.05086434855702733"/>
+    <inertia ixx="6e-06" iyy="1e-05" izz="6e-06" ixy="0.0" iyz="-0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.041398 0.282428 -0.298231" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://Monitring_description/meshes/front_right_sensor_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.041398 0.282428 -0.298231" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://Monitring_description/meshes/front_right_sensor_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="front_left_sensor_1">
+  <inertial>
+    <origin xyz="1.5667747201020266e-07 -0.005000066535598646 6.083392802835874e-06" rpy="0 0 0"/>
+    <mass value="0.050864348557027095"/>
+    <inertia ixx="6e-06" iyy="1e-05" izz="6e-06" ixy="0.0" iyz="-0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.04073 0.281928 -0.298069" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://Monitring_description/meshes/front_left_sensor_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.04073 0.281928 -0.298069" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://Monitring_description/meshes/front_left_sensor_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="right_sensor_cover_1">
+  <inertial>
+    <origin xyz="-3.865427420299272e-07 -0.0009998653682249947 7.413177312010077e-07" rpy="0 0 0"/>
+    <mass value="0.024969771109812754"/>
+    <inertia ixx="3e-06" iyy="6e-06" izz="3e-06" ixy="0.0" iyz="-0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.041398 0.297428 -0.298249" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://Monitring_description/meshes/right_sensor_cover_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.041398 0.297428 -0.298249" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://Monitring_description/meshes/right_sensor_cover_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="left_sensor_cover_1">
+  <inertial>
+    <origin xyz="1.566750857176502e-07 -0.0010000582692422655 8.72014260355769e-07" rpy="0 0 0"/>
+    <mass value="0.024969771109812727"/>
+    <inertia ixx="3e-06" iyy="6e-06" izz="3e-06" ixy="0.0" iyz="-0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.04073 0.297428 -0.298088" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://Monitring_description/meshes/left_sensor_cover_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.04073 0.297428 -0.298088" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://Monitring_description/meshes/left_sensor_cover_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="hydraulic_cylinder_shoilder_1">
+  <inertial>
+    <origin xyz="-3.6683610080061693e-07 -2.9177161562294598e-05 -0.026364798754519164" rpy="0 0 0"/>
+    <mass value="0.9454407029039884"/>
+    <inertia ixx="0.000959" iyy="0.000959" izz="0.000738" ixy="0.0" iyz="-0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.000208 0.001576 -0.252741" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://Monitring_description/meshes/hydraulic_cylinder_shoilder_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.000208 0.001576 -0.252741" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://Monitring_description/meshes/hydraulic_cylinder_shoilder_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="hydraulic_base_1">
+  <inertial>
+    <origin xyz="-3.75423157790894e-07 -5.159806883186157e-06 -0.004519380552026081" rpy="0 0 0"/>
+    <mass value="0.10420666516314857"/>
+    <inertia ixx="0.000118" iyy="0.000118" izz="0.000234" ixy="-0.0" iyz="0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.000208 0.001576 -0.252741" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://Monitring_description/meshes/hydraulic_base_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.000208 0.001576 -0.252741" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://Monitring_description/meshes/hydraulic_base_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="hydraulic_cylinder_elbow_1">
+  <inertial>
+    <origin xyz="-3.568217547931401e-07 -4.418653736857248e-05 -0.039841231788629416" rpy="0 0 0"/>
+    <mass value="1.2279882253595107"/>
+    <inertia ixx="0.000841" iyy="0.000841" izz="0.000382" ixy="0.0" iyz="-1e-06" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.000208 0.001589 -0.240741" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://Monitring_description/meshes/hydraulic_cylinder_elbow_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.000208 0.001589 -0.240741" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://Monitring_description/meshes/hydraulic_cylinder_elbow_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="jaw_rotator_clip_1">
+  <inertial>
+    <origin xyz="-7.545848842800977e-06 9.649372761507454e-06 -0.004410483066082049" rpy="0 0 0"/>
+    <mass value="0.004350966291698379"/>
+    <inertia ixx="0.0" iyy="0.0" izz="0.0" ixy="-0.0" iyz="-0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.000208 0.001677 -0.160741" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://Monitring_description/meshes/jaw_rotator_clip_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.000208 0.001677 -0.160741" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://Monitring_description/meshes/jaw_rotator_clip_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="jaw_rotator_nut_1">
+  <inertial>
+    <origin xyz="0.0076238856762389385 3.0208323198532925e-06 -3.8760053944209005e-08" rpy="0 0 0"/>
+    <mass value="0.003340071270723441"/>
+    <inertia ixx="0.0" iyy="0.0" izz="0.0" ixy="-0.0" iyz="-0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.007952 0.001687 -0.154741" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://Monitring_description/meshes/jaw_rotator_nut_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.007952 0.001687 -0.154741" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://Monitring_description/meshes/jaw_rotator_nut_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="jaw_rotator_1">
+  <inertial>
+    <origin xyz="0.010897963499537288 -0.00015447245080469274 -0.014696161355825632" rpy="0 0 0"/>
+    <mass value="0.05615400550640784"/>
+    <inertia ixx="3e-06" iyy="4e-06" izz="4e-06" ixy="-0.0" iyz="0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.01119 0.001688 -0.154741" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://Monitring_description/meshes/jaw_rotator_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.01119 0.001688 -0.154741" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://Monitring_description/meshes/jaw_rotator_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="jaw_shoulder_1">
+  <inertial>
+    <origin xyz="-1.2451457159735435e-05 -5.9180682004574166e-05 -0.012228638431265926" rpy="0 0 0"/>
+    <mass value="0.03059834864380673"/>
+    <inertia ixx="3e-06" iyy="4e-06" izz="3e-06" ixy="-0.0" iyz="-0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.000292 0.001852 -0.130237" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://Monitring_description/meshes/jaw_shoulder_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.000292 0.001852 -0.130237" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://Monitring_description/meshes/jaw_shoulder_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="sprayer_1">
+  <inertial>
+    <origin xyz="7.171750777889187e-08 -5.890181413258479e-06 -0.0055260026652866195" rpy="0 0 0"/>
+    <mass value="0.006523483507981387"/>
+    <inertia ixx="0.0" iyy="0.0" izz="0.0" ixy="0.0" iyz="-0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-3e-06 0.001857 -0.130237" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://Monitring_description/meshes/sprayer_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-3e-06 0.001857 -0.130237" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://Monitring_description/meshes/sprayer_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="jaw_back_palm_1">
+  <inertial>
+    <origin xyz="-1.0362083782172748e-05 0.005856671047257573 -0.015702655242094396" rpy="0 0 0"/>
+    <mass value="0.05569897642983135"/>
+    <inertia ixx="1.1e-05" iyy="1e-05" izz="3e-06" ixy="-0.0" iyz="-1e-06" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.000295 -0.005579 -0.108098" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://Monitring_description/meshes/jaw_back_palm_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.000295 -0.005579 -0.108098" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://Monitring_description/meshes/jaw_back_palm_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="jaw_front_palm_1">
+  <inertial>
+    <origin xyz="1.0162209032976125e-05 -0.005358451439446861 -0.015880153967867183" rpy="0 0 0"/>
+    <mass value="0.055699424431560826"/>
+    <inertia ixx="1.1e-05" iyy="1e-05" izz="3e-06" ixy="-0.0" iyz="1e-06" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.00029 0.00942 -0.107862" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://Monitring_description/meshes/jaw_front_palm_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.00029 0.00942 -0.107862" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://Monitring_description/meshes/jaw_front_palm_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="jaw_back_finger_1">
+  <inertial>
+    <origin xyz="1.9736965442535394e-07 -0.0008438348472427975 -0.010836610104960308" rpy="0 0 0"/>
+    <mass value="0.008207299762984344"/>
+    <inertia ixx="1e-06" iyy="1e-06" izz="0.0" ixy="0.0" iyz="-0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.000231 -0.008241 -0.066135" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://Monitring_description/meshes/jaw_back_finger_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.000231 -0.008241 -0.066135" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://Monitring_description/meshes/jaw_back_finger_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="jaw_front_finger_1">
+  <inertial>
+    <origin xyz="-1.1820294820392768e-06 0.0021227132385251302 -0.010659950221155456" rpy="0 0 0"/>
+    <mass value="0.008207299617451301"/>
+    <inertia ixx="1e-06" iyy="0.0" izz="0.0" ixy="0.0" iyz="0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.000354 0.010757 -0.065835" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://Monitring_description/meshes/jaw_front_finger_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.000354 0.010757 -0.065835" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://Monitring_description/meshes/jaw_front_finger_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<joint name="front_left_leg_motor_joint" type="fixed">
+  <origin xyz="0.003 0.112724 -0.138679" rpy="0 0 0"/>
+  <parent link="front_left_base_leg_1"/>
+  <child link="front_left_leg_motor_1"/>
+</joint>
+
+<joint name="front_left_base_leg_motor_joint" type="fixed">
+  <origin xyz="-0.01 -0.029502 -0.001545" rpy="0 0 0"/>
+  <parent link="front_left_base_1"/>
+  <child link="front_left_base_leg_motor_1"/>
+</joint>
+
+<joint name="rear_left_base_leg_motor_joint" type="fixed">
+  <origin xyz="-0.01 0.030033 0.005402" rpy="0 0 0"/>
+  <parent link="back_left_base_1"/>
+  <child link="back_left_base_leg_motor_1"/>
+</joint>
+
+<joint name="rear_left_leg_motor_joint" type="fixed">
+  <origin xyz="-0.002 0.112334 -0.138996" rpy="0 0 0"/>
+  <parent link="back_left_base_leg_1"/>
+  <child link="back_left_leg_motor_1"/>
+</joint>
+
+<joint name="rear_right_base_leg_motor_joint" type="fixed">
+  <origin xyz="0.01 0.029701 0.005363" rpy="0 0 0"/>
+  <parent link="back_right_base_1"/>
+  <child link="back_right_base_leg_motor_1"/>
+</joint>
+
+<joint name="rear_right_leg_motor_joint" type="fixed">
+  <origin xyz="0.002 0.112167 -0.139131" rpy="0 0 0"/>
+  <parent link="back_right_base_leg_1"/>
+  <child link="back_right_leg_motor_1"/>
+</joint>
+
+<joint name="front_right_base_leg_motor_joint" type="fixed">
+  <origin xyz="0.01 -0.030002 -0.001544" rpy="0 0 0"/>
+  <parent link="front_right_base_1"/>
+  <child link="front_right_base_leg_motor_1"/>
+</joint>
+
+<joint name="front_right_leg_motor_joint" type="fixed">
+  <origin xyz="-0.003 0.112333 -0.138996" rpy="0 0 0"/>
+  <parent link="front_right_base_leg_1"/>
+  <child link="front_right_leg_motor_1"/>
+</joint>
+
+<joint name="front_left_base_leg_joint" type="revolute">
+  <origin xyz="0.03 0.0 0.0" rpy="0 0 0"/>
+  <parent link="front_left_base_leg_motor_1"/>
+  <child link="front_left_base_leg_1"/>
+  <axis xyz="1.0 0.0 0.0"/>
+  <limit upper="1.047198" lower="-1.570796" effort="100" velocity="100"/>
+</joint>
+
+<joint name="front_left_leg_joint" type="revolute">
+  <origin xyz="-0.035 0.0 0.0" rpy="0 0 0"/>
+  <parent link="front_left_leg_motor_1"/>
+  <child link="front_left_leg_1"/>
+  <axis xyz="-1.0 -0.0 -0.0"/>
+  <limit upper="1.047198" lower="-1.570796" effort="100" velocity="100"/>
+</joint>
+
+<joint name="rear_left_base_leg_joint" type="revolute">
+  <origin xyz="0.03 0.0 0.0" rpy="0 0 0"/>
+  <parent link="back_left_base_leg_motor_1"/>
+  <child link="back_left_base_leg_1"/>
+  <axis xyz="1.0 0.0 0.0"/>
+  <limit upper="1.047198" lower="-1.570796" effort="100" velocity="100"/>
+</joint>
+
+<joint name="rear_left_leg_joint" type="revolute">
+  <origin xyz="-0.03 0.0 0.0" rpy="0 0 0"/>
+  <parent link="back_left_leg_motor_1"/>
+  <child link="back_left_leg_1"/>
+  <axis xyz="-1.0 -0.0 -0.0"/>
+  <limit upper="1.047198" lower="-1.570796" effort="100" velocity="100"/>
+</joint>
+
+<joint name="rear_right_base_leg_joint" type="revolute">
+  <origin xyz="-0.03 0.0 0.0" rpy="0 0 0"/>
+  <parent link="back_right_base_leg_motor_1"/>
+  <child link="back_right_base_leg_1"/>
+  <axis xyz="-1.0 -0.0 -0.0"/>
+  <limit upper="1.047198" lower="-1.570796" effort="100" velocity="100"/>
+</joint>
+
+<joint name="rear_right_leg_joint" type="revolute">
+  <origin xyz="0.03 0.0 0.0" rpy="0 0 0"/>
+  <parent link="back_right_leg_motor_1"/>
+  <child link="back_right_leg_1"/>
+  <axis xyz="1.0 0.0 0.0"/>
+  <limit upper="1.570796" lower="-1.047198" effort="100" velocity="100"/>
+</joint>
+
+<joint name="front_right_base_leg_joint" type="revolute">
+  <origin xyz="-0.03 0.0 0.0" rpy="0 0 0"/>
+  <parent link="front_right_base_leg_motor_1"/>
+  <child link="front_right_base_leg_1"/>
+  <axis xyz="-1.0 -0.0 -0.0"/>
+  <limit upper="1.047198" lower="-1.570796" effort="100" velocity="100"/>
+</joint>
+
+<joint name="front_right_leg_joint" type="revolute">
+  <origin xyz="0.035 0.0 0.0" rpy="0 0 0"/>
+  <parent link="front_right_leg_motor_1"/>
+  <child link="front_right_leg_1"/>
+  <axis xyz="1.0 0.0 0.0"/>
+  <limit upper="1.570796" lower="-1.047198" effort="100" velocity="100"/>
+</joint>
+
+<joint name="front_left_base_joint" type="prismatic">
+  <origin xyz="0.149917 -0.202438 0.289554" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="front_left_base_1"/>
+  <axis xyz="-1.0 -0.0 -0.0"/>
+  <limit upper="0.0" lower="-0.05" effort="100" velocity="100"/>
+</joint>
+
+<joint name="front_right_base_joint" type="prismatic">
+  <origin xyz="-0.150083 -0.202438 0.289554" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="front_right_base_1"/>
+  <axis xyz="1.0 0.0 0.0"/>
+  <limit upper="0.0" lower="-0.05" effort="100" velocity="100"/>
+</joint>
+
+<joint name="rear_left_base_joint" type="prismatic">
+  <origin xyz="0.149667 0.199368 0.28207" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="back_left_base_1"/>
+  <axis xyz="-1.0 -0.0 -0.0"/>
+  <limit upper="0.0" lower="-0.05" effort="100" velocity="100"/>
+</joint>
+
+<joint name="rear_right_base_joint" type="prismatic">
+  <origin xyz="-0.150333 0.199368 0.28207" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="back_right_base_1"/>
+  <axis xyz="1.0 0.0 0.0"/>
+  <limit upper="0.0" lower="-0.05" effort="100" velocity="100"/>
+</joint>
+
+<joint name="lidar_joint" type="fixed">
+  <origin xyz="-8.4e-05 -0.132368 0.34789" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="lidar_1"/>
+</joint>
+
+<joint name="front_right_sensor_joint" type="fixed">
+  <origin xyz="0.108685 -0.07999 0.008677" rpy="0 0 0"/>
+  <parent link="front_right_base_1"/>
+  <child link="front_right_sensor_1"/>
+</joint>
+
+<joint name="front_left_sensor_joint" type="fixed">
+  <origin xyz="-0.109187 -0.07949 0.008515" rpy="0 0 0"/>
+  <parent link="front_left_base_1"/>
+  <child link="front_left_sensor_1"/>
+</joint>
+
+<joint name="front_right_sensor_cover_joint" type="fixed">
+  <origin xyz="0.108685 -0.09499 0.008695" rpy="0 0 0"/>
+  <parent link="front_right_base_1"/>
+  <child link="right_sensor_cover_1"/>
+</joint>
+
+<joint name="front_left_sensor_cover_joint" type="fixed">
+  <origin xyz="-0.109187 -0.09499 0.008534" rpy="0 0 0"/>
+  <parent link="front_left_base_1"/>
+  <child link="left_sensor_cover_1"/>
+</joint>
+
+<joint name="hydraulic_base_joint" type="fixed">
+  <origin xyz="-0.000208 -0.001576 0.252741" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="hydraulic_cylinder_shoilder_1"/>
+</joint>
+
+<joint name="hydraulic_base_rubber_joint" type="fixed">
+  <origin xyz="-0.000208 -0.001576 0.252741" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="hydraulic_base_1"/>
+</joint>
+
+<joint name="hydraulic_cylinder_elbow_joint" type="prismatic">
+  <origin xyz="0.0 -1.3e-05 -0.012" rpy="0 0 0"/>
+  <parent link="hydraulic_cylinder_shoilder_1"/>
+  <child link="hydraulic_cylinder_elbow_1"/>
+  <axis xyz="0.0 -0.001099 -0.999999"/>
+  <limit upper="0.06" lower="0.0" effort="100" velocity="100"/>
+</joint>
+
+<joint name="jaw_rotator_clip_joint" type="continuous">
+  <origin xyz="0.0 -8.8e-05 -0.08" rpy="0 0 0"/>
+  <parent link="hydraulic_cylinder_elbow_1"/>
+  <child link="jaw_rotator_clip_1"/>
+  <axis xyz="-0.0 0.001099 0.999999"/>
+</joint>
+
+<joint name="jaw_rotator_clip_nut_joint" type="fixed">
+  <origin xyz="-0.007744 -1e-05 -0.006" rpy="0 0 0"/>
+  <parent link="jaw_rotator_clip_1"/>
+  <child link="jaw_rotator_nut_1"/>
+</joint>
+
+<joint name="jaw_rotator_joint" type="revolute">
+  <origin xyz="-0.003238 -1e-06 0.0" rpy="0 0 0"/>
+  <parent link="jaw_rotator_nut_1"/>
+  <child link="jaw_rotator_1"/>
+  <axis xyz="-1.0 -0.000372 0.0"/>
+  <limit upper="1.047198" lower="-1.047198" effort="100" velocity="100"/>
+</joint>
+
+<joint name="jaw_shoulder_joint" type="fixed">
+  <origin xyz="0.010898 -0.000164 -0.024504" rpy="0 0 0"/>
+  <parent link="jaw_rotator_1"/>
+  <child link="jaw_shoulder_1"/>
+</joint>
+
+<joint name="sprayer_joint" type="fixed">
+  <origin xyz="0.000295 -5e-06 0.0" rpy="0 0 0"/>
+  <parent link="jaw_shoulder_1"/>
+  <child link="sprayer_1"/>
+</joint>
+
+<joint name="jaw_back_palm_joint" type="revolute">
+  <origin xyz="-3e-06 0.007431 -0.022139" rpy="0 0 0"/>
+  <parent link="jaw_shoulder_1"/>
+  <child link="jaw_back_palm_1"/>
+  <axis xyz="-1.0 -0.000372 0.0"/>
+  <limit upper="0.0" lower="-1.047198" effort="100" velocity="100"/>
+</joint>
+
+<joint name="jaw_front_palm_joint" type="revolute">
+  <origin xyz="2e-06 -0.007568 -0.022375" rpy="0 0 0"/>
+  <parent link="jaw_shoulder_1"/>
+  <child link="jaw_front_palm_1"/>
+  <axis xyz="-1.0 -0.000372 0.0"/>
+  <limit upper="1.047198" lower="0.0" effort="100" velocity="100"/>
+</joint>
+
+<joint name="jaw_back_finger_joint" type="revolute">
+  <origin xyz="6.4e-05 0.002662 -0.041963" rpy="0 0 0"/>
+  <parent link="jaw_back_palm_1"/>
+  <child link="jaw_back_finger_1"/>
+  <axis xyz="-1.0 -0.000372 0.0"/>
+  <limit upper="0.0" lower="-1.047198" effort="100" velocity="100"/>
+</joint>
+
+<joint name="jaw_front_finger_joint" type="revolute">
+  <origin xyz="-6.4e-05 -0.001337 -0.042027" rpy="0 0 0"/>
+  <parent link="jaw_front_palm_1"/>
+  <child link="jaw_front_finger_1"/>
+  <axis xyz="1.0 0.000372 -0.0"/>
+  <limit upper="0.0" lower="-1.047198" effort="100" velocity="100"/>
+</joint>
+
+</robot>
